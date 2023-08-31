@@ -1,4 +1,4 @@
-name: 'my docker action'
+name: 'my docker action fhernandez'
 description: 'Greet someone and record the time'
 inputs:
   who-to-greet:  # id of input
