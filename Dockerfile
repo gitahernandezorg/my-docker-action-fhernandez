@@ -16,8 +16,8 @@ FROM python:3.10.13-alpine
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /usr/src/app
+WORKDIR /github/workspace
 
-COPY . /usr/src/app
+COPY . /github/workspace
 
 ENTRYPOINT ["python", "main.py"]
