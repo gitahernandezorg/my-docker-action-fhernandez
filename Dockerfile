@@ -16,6 +16,8 @@ FROM python:3.10.13-alpine
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
+ENV GITHUB_APITOKEN=
+
 COPY main.py /main.py
 
 ENTRYPOINT ["python", "/main.py"]
