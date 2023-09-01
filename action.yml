@@ -6,7 +6,7 @@ inputs:
     required: true
     default: 'World'
   github-token:  # id of input
-    description: 'github token'
+    description: 'Github token'
     required: true
     default: 'NO DEFINED'
 outputs:
