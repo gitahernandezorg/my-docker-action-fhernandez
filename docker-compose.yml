@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  githubintegration:
+    build:
+      context: .
+    environment:
+      - INPUT_GITHUB_TOKEN=${INPUT_GITHUB_TOKEN}
+    container_name: githubintegration_container
+    #command: python manage.py runserver 0.0.0.0:8000
+    #command: python -m unittest discover sidecar_agent_project/unit_tests/ -p '*.py'
+    #command: python -m unittest discover sidecar_agent_project/integration_tests/ -p '*.py'
+    #command: python -m unittest discover sidecar_agent_project/ -p '*.py'
+    #command: python get_secrets_from_secret_safe.py; 
+    volumes: 
+      - .:/usr/src/app
+    ports:
+      - "80:8000"
