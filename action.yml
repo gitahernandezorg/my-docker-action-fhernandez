@@ -5,7 +5,7 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
-  github-token:  # id of input
+  github_token:  # id of input
     description: 'Github token'
     required: true
     default: 'NO DEFINED'
@@ -17,4 +17,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.who-to-greet }}
-    - ${{ inputs.github-token }}
+    - ${{ inputs.github_token }}
