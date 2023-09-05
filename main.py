@@ -5,6 +5,7 @@ greet_env = os.getenv('who-to-greet-env')
 print(f"Got token {token}")
 print(f"greet_env {greet_env}")
 
+""""
 import requests
 
 url = 'https://api.github.com/orgs/gitahernandezorg/actions/secrets'
@@ -17,3 +18,6 @@ if response.status_code == 200:
     print(data)
 else:
     print('Error al hacer la solicitud:', response.status_code)
+"""
+num = 2 * 2
+print(f"::set-output name=test_variable::{num}")
