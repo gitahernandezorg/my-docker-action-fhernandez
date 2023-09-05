@@ -1,8 +1,9 @@
 import os
 print("Python Execution")
 token = os.getenv('INPUT_GITHUB_TOKEN')
+greet_env = os.getenv('who-to-greet-env')
 print(f"Got token {token}")
-
+print(f"greet_env {greet_env}")
 
 import requests
 
