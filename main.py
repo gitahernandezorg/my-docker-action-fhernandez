@@ -12,6 +12,7 @@ print(f"greet_env {greet_env}")
 
 
 def set_github_action_output(output_name, output_value):
+    print("GITHUB_OUTPUT", os.environ["GITHUB_OUTPUT"])
     f = open(os.path.abspath(os.environ["GITHUB_OUTPUT"]), "a")
     f.write(f'{output_name}={output_value}')
     f.close()
@@ -37,11 +38,13 @@ for\
 geeks"
 set_github_action_output('multiline', multiline)
 
+""""
 random_uuid = uuid.uuid4()
 
 # Definir los parámetros necesarios
 secret_name = "my_secret_"+str(random_uuid).replace("-", "")
 secret_value = multiline  # El valor del secreto que deseas almacenar
+
 
 # URL de la API de GitHub para crear el secreto
 url = f"https://api.github.com/orgs/gitahernandezorg/actions/secrets/{secret_name}"
@@ -58,10 +61,8 @@ response = requests.get(get_key_id_url, headers=headers)
 
 key_id_data = response.json()
 
-# Codifica el valor del secreto en base64
 secret_value_base64 = base64.b64encode(secret_value.encode()).decode()
 
-# Configura el cuerpo de la solicitud
 data = {
     "encrypted_value": secret_value_base64,
     "visibility":"selected",
@@ -77,3 +78,4 @@ if response.status_code == 201:
 else:
     print(f"No se pudo crear el secreto. Código de estado: {response.status_code}")
     print(f"Respuesta: {response}")
+"""
