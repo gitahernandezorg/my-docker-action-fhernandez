@@ -25,9 +25,11 @@ num = 2 * 2
 set_github_action_output('test_variable', num)
 """
 
-multiline = "geeksy\
-for\
-geeks"
+multiline = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+
 set_multiline_output('multiline', multiline)
 
 content = "variable content"
