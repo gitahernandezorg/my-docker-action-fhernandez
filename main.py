@@ -30,6 +30,11 @@ for\
 geeks"
 set_multiline_output('multiline', multiline)
 
+content = "variable content"
+set_multiline_output('test_variable', content)
+
+print(multiline)
+print(content)
 
 
 
