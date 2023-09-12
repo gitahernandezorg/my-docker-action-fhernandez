@@ -1,3 +1,4 @@
 requests==2.31.0
 PyNaCl
 sayhellopackagefhernandez==0.0.2
+sayhellopackagefhernandezv2==0.0.1

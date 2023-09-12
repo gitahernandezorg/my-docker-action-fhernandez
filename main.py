@@ -1,8 +1,12 @@
 import os
 import uuid
 from sayhellopackagefhernandez import hello
+from sayhellopackagefhernandezv2 import hello as hello2
 
+print("Hello from sayhellopackagefhernandez")
 hello.sayhello()
+print("Hello from sayhellopackagefhernandezv2")
+hello2.sayhello()
 
 print("Python Execution")
 token = os.getenv('INPUT_GITHUB_TOKEN')
