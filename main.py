@@ -13,12 +13,9 @@ print(f"greet_env {greet_env}")
 
 
 def set_github_action_output(output_name, output_value):
-    pass
-    """
     f = open(os.path.abspath(os.environ["GITHUB_OUTPUT"]), "a")
     f.write(f'{output_name}={output_value}')
     f.close()
-    """
 
 def set_multiline_output(name, value):
     with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
